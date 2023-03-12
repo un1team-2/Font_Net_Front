@@ -3,7 +3,7 @@ import styles from '../../styles/styles.module.scss'
 export default function Header(){
   
     return (
-      <Navbar variant="sticky" className={styles.navBar}>
+      <Navbar variant="sticky" className={styles.navBar} maxWidth="fluid">
         <Navbar.Brand>
           <Text b color="inherit" hideIn="xs">
             FontNet

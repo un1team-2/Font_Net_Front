@@ -4,6 +4,8 @@ import EnterContent from "@/components/base-components-font-net/base-enter-conte
 import FontImagesConent from "@/components/base-components-font-net/font-images-content";
 import QuestionBlock from "@/components/base-components-font-net/base-questions";
 import BigSocial from "@/components/base-components-font-net/base-big-social";
+import { globalCss } from '@nextui-org/react';
+
 export default function Main() {
 
     return (
