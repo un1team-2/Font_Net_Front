@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../styles/styles.module.scss";
+import styles from "./ad.module.scss";
 
 type Props = {
 	imageSrc: string;

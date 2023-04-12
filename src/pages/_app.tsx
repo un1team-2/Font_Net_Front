@@ -6,6 +6,7 @@ import {
 	ColorScheme,
 } from "@mantine/core";
 import { useState } from "react";
+import Layout from "@/common/components/layout";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -31,7 +32,9 @@ export default function App({ Component, pageProps }: AppProps) {
 					withNormalizeCSS
 					theme={{ colorScheme }}
 				>
-					<Component {...pageProps} />
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
 				</MantineProvider>
 			</ColorSchemeProvider>
 		</>

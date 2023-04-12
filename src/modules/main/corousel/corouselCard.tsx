@@ -1,6 +1,6 @@
 import { Paper } from "@mantine/core";
 import React from "react";
-import { useStyles } from "./styles";
+import { useStyles } from "./corouselCard.style";
 
 type Props = {
 	image: string;

@@ -1,5 +1,5 @@
-import Ad from "../ad";
-import Card from "../card";
+import Ad from "./ad";
+import Card from "./card";
 import { SimpleGrid } from "@mantine/core";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import Question from "../questionBlock";
+import Question from "./question";
 import { Container, Text } from "@mantine/core";
 import React from "react";
 

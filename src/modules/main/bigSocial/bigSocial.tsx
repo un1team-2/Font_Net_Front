@@ -1,5 +1,5 @@
 import Ad from "../ad";
-import styles from "../../styles/styles.module.scss";
+import styles from "./bigSocial.module.scss";
 import { Text } from "@mantine/core";
 import React from "react";
 

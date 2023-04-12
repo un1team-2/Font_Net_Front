@@ -1,7 +1,6 @@
-import { Text } from "@mantine/core";
-import { Card, Group } from "@mantine/core";
+import { Text, Card, Group } from "@mantine/core";
 import React from "react";
-import { useStyles } from "./styles";
+import { useStyles } from "./textCard.style";
 
 type Props = {
 	text: string;

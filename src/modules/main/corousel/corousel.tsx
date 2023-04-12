@@ -1,7 +1,7 @@
 import { Carousel } from "@mantine/carousel";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme, rem } from "@mantine/core";
-import Card from "../base-card/base-card";
+import Card from "./corouselCard";
 import React from "react";
 
 const data = [

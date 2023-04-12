@@ -7,12 +7,12 @@ import {
 	Transition,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { useStyles, HEADER_HEIGHT } from "./styles";
+import { useStyles, HEADER_HEIGHT } from "./header.style";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import ThemeToggle from "@/components/themeToggle";
+import ThemeToggle from "@/common/components/themeToggle";
 import React from "react";
-import BrandIcon from "@/components/common/brandIcon";
+import BrandIcon from "@/common/components/brandIcon";
 
 const links: { link: string; label: string }[] = [
 	{ link: "/", label: "Главная" },
@@ -43,7 +43,7 @@ const HeaderResponsive: React.FC = () => {
 	return (
 		<Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
 			<Container className={classes.header}>
-                <BrandIcon />
+				<BrandIcon />
 				<Group spacing={5} className={classes.links}>
 					{items}
 				</Group>
