@@ -1,27 +1,30 @@
-import { Navbar, Text,Button, Container, Card, Image } from "@nextui-org/react";
-import styles from '../styles/styles.module.scss'
+import { Container, Text } from "@mantine/core";
+import Image from "next/image";
+import React from "react";
 
-type Props = {imageSrc:string, title:string}
-const bigSocial: React.FC<Props> = ({imageSrc,title}) => {
-    return (
-      <Container md>
-        <Text
-        h1
-        size={40}
-        css={{
-          textGradient: "45deg, $blue600 -20%, $pink600 50%",
-        }}
-        weight="bold"
-      >
-        {title}
-      </Text>
-      <Image
-          src={imageSrc}
-          alt="Default Image"
-          width={300}
-          height={200}
-        />
-      </Container>
-    )
-}
-export default bigSocial;
+type Props = {
+	imageSrc: string;
+	title: string;
+};
+
+const BigSocial: React.FC<Props> = ({ imageSrc, title }) => {
+	return (
+		<Container size="md">
+			<Text
+				size={40}
+				variant="gradient"
+				gradient={{ from: "indigo6", to: "grape6", deg: 45 }}
+				weight="bold"
+			>
+				{title}
+			</Text>
+			<Image
+				src={imageSrc}
+				alt="Default Image"
+				width={300}
+				height={200}
+			/>
+		</Container>
+	);
+};
+export default React.memo(BigSocial);

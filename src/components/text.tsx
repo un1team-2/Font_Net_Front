@@ -1,12 +1,19 @@
-import { Text } from "@nextui-org/react";
-type Props = {text:string}
-import styles from '../styles/styles.module.scss'
-const TextUi: React.FC<Props> = ({text}) => {
-  return (
-    <>
-      <Text className={styles.text} size="$xl">{text}</Text>
-    </>
-  );
-}
+import { Text as MText } from "@mantine/core";
+import React from "react";
+import styles from "../styles/styles.module.scss";
 
-export default TextUi;
+type Props = {
+	text: string;
+};
+
+const Text: React.FC<Props> = ({ text }) => {
+	return (
+		<>
+			<MText className={styles.text} size="xl">
+				{text}
+			</MText>
+		</>
+	);
+};
+
+export default React.memo(Text);

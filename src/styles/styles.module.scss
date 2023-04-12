@@ -2,21 +2,22 @@
 $default-margin: 200px;
 
 .card {
-  margin-left: $default-margin;
+	margin-left: $default-margin;
 }
+
 .navBar {
-  width: 100%;
-  z-index: 1000;
+	width: 100%;
+	z-index: 1000;
 }
 
 .font__image {
-  margin-left: -110px;
+	margin-left: -110px;
 }
 
 .social__title {
-  text-align: center;
+	text-align: center;
 }
 
 .images {
-  border-radius: 10px;
+	border-radius: 10px;
 }

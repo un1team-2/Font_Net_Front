@@ -1,18 +1,23 @@
-import { Navbar, Text,Button, Container, Card, Collapse } from "@nextui-org/react";
-import styles from '../styles/styles.module.scss'
+import { Text, Collapse, Box, Button } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import React from "react";
 
-type Props = {text:string, title:string}
-const Questions: React.FC<Props> = ({text,title}) => {
-    return (
-      <Container md>
-      <Collapse.Group accordion={false}>
-      <Collapse title={title}>
-        <Text>
-         {text}
-        </Text>
-      </Collapse>
-    </Collapse.Group>
-    </Container>
-    )
-}
-export default Questions;
+type Props = {
+	text: string;
+	title: string;
+};
+
+const Question: React.FC<Props> = ({ text, title }) => {
+	const [opened, { toggle }] = useDisclosure(false);
+
+	return (
+		<Box maw="400">
+			<Button onClick={toggle}>{title}</Button>
+			<Collapse in={opened}>
+				<Text>{text}</Text>
+			</Collapse>
+		</Box>
+	);
+};
+
+export default React.memo(Question);
