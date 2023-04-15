@@ -1,17 +1,21 @@
-import { Dropzone as MDropZone } from "@mantine/dropzone";
+import { Dropzone as MDropZone, FileWithPath } from "@mantine/dropzone";
 import { Group, Text, useMantineTheme, rem } from "@mantine/core";
 import { IconUpload, IconX, IconFileUpload } from "@tabler/icons-react";
 import React from "react";
 
-const DropZone: React.FC = () => {
+type Props = {
+	onDrop: (files: FileWithPath[]) => void;
+};
+
+const FontUpload: React.FC<Props> = ({ onDrop }) => {
 	const theme = useMantineTheme();
 
 	return (
 		<MDropZone
-			onDrop={(files) => console.log("accepted files", files)}
-			onReject={(files) => console.log("rejected files", files)}
 			maxSize={3 * 1024 ** 2}
 			accept={["font/ttf", "font/woff", "font/woff2", "font/otf"]}
+			onDrop={onDrop}
+			multiple={false}
 		>
 			<Group
 				position="center"
@@ -52,4 +56,4 @@ const DropZone: React.FC = () => {
 	);
 };
 
-export default React.memo(DropZone);
+export default React.memo(FontUpload);
