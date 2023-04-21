@@ -1,42 +1,40 @@
-import Question from "./question";
-import { Container, Text } from "@mantine/core";
+import { Accordion, Container, Text } from "@mantine/core";
 import React from "react";
+import { useStyles } from './questionBlock.style';
 
 const QuestionBlock: React.FC = () => {
+	const { classes } = useStyles();
 	return (
-		<>
-			<Container size="md">
-				<Text
-					size={40}
+		<Container className={classes.container}>
+			<Text
+			className={classes.title}
+					size="xl"
 					variant="gradient"
-					gradient={{ from: "indigo6", to: "grape6", deg: 45 }}
-					weight="bold"
+					gradient={{ from: "violet", to: "indigo", deg: 45 }}
+					weight={500}
 				>
 					Вопросы
 				</Text>
-			</Container>
-			<Question
-				title="- Как пользоваться?"
-				text="Все просто идите туда возьмите то принесите это"
-			></Question>
-			<Question
-				title="- Почему мы?"
-				text="Все просто идите туда возьмите то принесите это"
-			></Question>
-			<Question
-				title="- Если я лемур?"
-				text="Все просто идите туда возьмите то принесите это"
-			></Question>
-			<Question
-				title="- Бегемоты по программе трейд ин?"
-				text="Все просто идите туда возьмите то принесите это"
-			></Question>
-			<Question
-				title="- Смысл жизни?"
-				text="Все просто идите туда возьмите то принесите это"
-			></Question>
-		</>
-	);
+        <Accordion className={classes.accordion} variant="separated" radius="xl" defaultValue="customization" >
+          <Accordion.Item value="customization">
+            <Accordion.Control className={classes.text} >
+			Почему мы?
+				</Accordion.Control>
+            <Accordion.Panel>Ясность нашей позиции очевидна: убеждённость некоторых оппонентов является качественно новой ступенью системы массового участия. Разнообразный и богатый опыт говорит нам, что семантический разбор внешних противодействий способствует повышению качества соответствующих условий активизации.</Accordion.Panel>
+          </Accordion.Item>
+    
+          <Accordion.Item value="flexibility">
+            <Accordion.Control  className={classes.text} >Flexibility</Accordion.Control>
+            <Accordion.Panel>Configure components appearance and behavior with vast amount of settings or overwrite any part of component styles</Accordion.Panel>
+          </Accordion.Item>
+    
+          <Accordion.Item value="focus-ring">
+            <Accordion.Control  className={classes.text} >No annoying focus ring</Accordion.Control>
+            <Accordion.Panel>With new :focus-visible pseudo-class focus ring appears only when user navigates with keyboard</Accordion.Panel>
+          </Accordion.Item>
+        </Accordion>
+		</Container>
+      );
 };
 
 export default React.memo(QuestionBlock);
