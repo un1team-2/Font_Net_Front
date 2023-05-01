@@ -1,5 +1,5 @@
 import { FontContent } from "@/common/api/controllers/font/types";
-import { Loader } from "@mantine/core";
+import { Center, Loader } from "@mantine/core";
 import React, { useEffect } from "react";
 import useFontConvert from "../hooks/useFontConvert";
 
@@ -17,7 +17,11 @@ const FontConvert: React.FC<Props> = ({ sourceFile, onConvert }) => {
 
 	return (
 		<>
-			{!loaded && <Loader />}
+			{!loaded && (
+				<Center>
+					<Loader m="auto" />
+				</Center>
+			)}
 			{loaded && error}
 		</>
 	);

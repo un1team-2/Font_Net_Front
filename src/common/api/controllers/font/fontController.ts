@@ -42,7 +42,7 @@ const prerender = async (
 	cancel = false
 ) => {
 	const response = await apiClient.get<Blob>(`font/${id}/prerender`, {
-		data: {
+		params: {
 			text,
 			width,
 			height,
