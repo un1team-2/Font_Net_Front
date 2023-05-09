@@ -12,7 +12,7 @@ const getById = async (id: number, cancel = false) => {
 	return response;
 };
 
-const convert = async (file: File | Blob, cancel = false) => {
+const convert = async (file: File | Blob, force = false, cancel = false) => {
 	const formData = new FormData();
 	formData.append("file", file);
 	const response = await apiClient.post<ConvertResponse>(
@@ -21,6 +21,9 @@ const convert = async (file: File | Blob, cancel = false) => {
 		{
 			headers: {
 				"Content-Type": "multipart/form-data",
+			},
+			params: {
+				force: force,
 			},
 		}
 	);

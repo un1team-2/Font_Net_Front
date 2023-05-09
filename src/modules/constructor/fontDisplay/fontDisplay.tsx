@@ -75,7 +75,7 @@ const FontDisplay: React.FC<Props> = ({ font, onForcePrerenderClick }) => {
 						variant="default"
 						color="gray"
 						onClick={onForcePrerenderClick}
-                        disabled
+                        sx={{borderTopRightRadius: 0, borderBottomRightRadius: 0}}
 					>
 						Перевести заново
 					</Button>
@@ -84,6 +84,7 @@ const FontDisplay: React.FC<Props> = ({ font, onForcePrerenderClick }) => {
 						href={fileURL}
 						download={font.name + font.extension}
 						leftIcon={<IconDownload />}
+                        sx={{borderTopLeftRadius: 0, borderBottomLeftRadius: 0}}
 					>
 						Скачать
 					</Button>

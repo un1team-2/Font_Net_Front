@@ -8,6 +8,12 @@ import { useState } from "react";
 const ConstructorPage: NextPage = () => {
 	const [sourceFile, setSourceFile] = useState<FileWithPath>();
 	const [font, setFont] = useState<FontContent>();
+	const [force, setForce] = useState(false);
+
+	const onForceClick = () => {
+		setFont(undefined);
+		setForce(true);
+	};
 
 	return (
 		<Container size="md">
@@ -15,9 +21,14 @@ const ConstructorPage: NextPage = () => {
 				<FontUpload onDrop={(f) => setSourceFile(f[0])} />
 			)}
 			{sourceFile && font === undefined && (
-				<FontConvert sourceFile={sourceFile} onConvert={setFont} />
+				<FontConvert sourceFile={sourceFile} onConvert={setFont} force={force} />
 			)}
-			{font !== undefined && <FontDisplay font={font} />}
+			{font !== undefined && (
+				<FontDisplay
+					font={font}
+					onForcePrerenderClick={onForceClick}
+				/>
+			)}
 		</Container>
 	);
 };

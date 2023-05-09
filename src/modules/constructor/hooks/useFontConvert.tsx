@@ -7,7 +7,7 @@ import { Result } from "@/common/api/types";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const useFontConvert = (sourceFile: File | Blob) => {
+const useFontConvert = (sourceFile: File | Blob, force: boolean = false) => {
 	const [data, setData] = useState<Result<FontContent>>();
 	const [error, setError] = useState<string>();
 	const [loaded, setLoaded] = useState(false);
@@ -19,7 +19,7 @@ const useFontConvert = (sourceFile: File | Blob) => {
 				const response =
 					taskId !== undefined
 						? await FontController.getTaskById(taskId)
-						: await FontController.convert(sourceFile);
+						: await FontController.convert(sourceFile, force);
 				if (response.status === 200) {
 					setData(response.data as Result<FontContent>);
 					setLoaded(true);
