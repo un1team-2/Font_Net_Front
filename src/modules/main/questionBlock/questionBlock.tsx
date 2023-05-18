@@ -5,7 +5,7 @@ import { useStyles } from './questionBlock.style';
 const QuestionBlock: React.FC = () => {
 	const { classes } = useStyles();
 	return (
-		<Container className={classes.container}>
+    <div>
 			<Text
 			className={classes.title}
 					size="xl"
@@ -33,7 +33,7 @@ const QuestionBlock: React.FC = () => {
             <Accordion.Panel>With new :focus-visible pseudo-class focus ring appears only when user navigates with keyboard</Accordion.Panel>
           </Accordion.Item>
         </Accordion>
-		</Container>
+        </div>
       );
 };
 
