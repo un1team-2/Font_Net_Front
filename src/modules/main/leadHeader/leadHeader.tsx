@@ -17,6 +17,7 @@ import image from './image_leadH.svg';
   const useStyles = createStyles((theme) => ({
     inner: {
       display: 'flex',
+      marginTop:'-100px',
       justifyContent: 'space-between',
       paddingTop: `calc(${theme.spacing.xl} * 4)`,
       paddingBottom: `calc(${theme.spacing.xl} * 4)`,
@@ -74,11 +75,10 @@ import image from './image_leadH.svg';
     const { classes } = useStyles();
     return (
       <div>
-        <Container>
-          <div className={classes.inner}>
+          <div className={classes.inner} >
             <div className={classes.content}>
               <Title className={classes.title}>
-                Мы <span className={classes.highlight}>Уникальный</span> ИИ <br /> Инструмент
+                Мы <span className={classes.highlight}>Уникальный</span> ИИ инструмент <br /> для творческих личностей!
               </Title>
               <Text color="dimmed" mt="md">
                 Наш сервис занимается адаптацией инностранных шрифтов под кириллицу!
@@ -104,19 +104,9 @@ import image from './image_leadH.svg';
                   <b>Free to use</b> – Пока проект в стадии альфа тестирования, мы предлагаем вам самим попробовать!
                 </List.Item>
               </List>
-  
-              <Group mt={30}>
-                <Button radius="xl" size="md" className={classes.control}>
-                  <a href='./constructor' className={classes.link}>Приступим!</a>
-                </Button>
-                <Button variant="default" radius="xl" size="md" className={classes.control}>
-                  Source code
-                </Button>
-              </Group>
             </div>
             <Image src={image.src} className={classes.image} />
-          </div>
-        </Container>
+          </div> 
       </div>
     );
   }

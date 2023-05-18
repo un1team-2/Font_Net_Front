@@ -6,7 +6,7 @@ import {LeadHeader} from "@/modules/main";
 
 const IndexPage: NextPage = () => {
 	return (
-		<Container my="md">
+		<Container size="lg">
 			<LeadHeader></LeadHeader>
 			<TextCard
 				title="Первый инструмент для перевода шрифта на русский с помощью И.И."
