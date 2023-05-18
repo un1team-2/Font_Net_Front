@@ -17,7 +17,7 @@ const TextCard: React.FC<Props> = ({ text, title }) => {
 			radius="md"
 			withBorder
 		>
-			<Group position="apart" mt="md" mb="xs">
+			<Group position="apart">
 				<Text
 					size="xl"
 					variant="gradient"

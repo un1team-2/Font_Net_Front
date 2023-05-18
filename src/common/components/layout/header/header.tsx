@@ -16,8 +16,8 @@ import BrandIcon from "@/common/components/brandIcon";
 
 const links: { link: string; label: string }[] = [
 	{ link: "/", label: "Главная" },
-	{ link: "/constructor", label: "Конструктор" },
-	{ link: "/about", label: "О нас" },
+	// { link: "/constructor", label: "Конструктор" },
+	// { link: "/about", label: "О нас" },
 ];
 
 const HeaderResponsive: React.FC = () => {
@@ -42,7 +42,7 @@ const HeaderResponsive: React.FC = () => {
 
 	return (
 		<Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
-			<Container className={classes.header}>
+			<Container size="lg" className={classes.header}>
 				<BrandIcon />
 				<Group spacing={5} className={classes.links}>
 					{items}

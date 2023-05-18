@@ -1,11 +1,11 @@
 import { FontContent } from "@/common/api/controllers/font/types";
-import { FontConvert, FontUpload, FontDisplay } from "@/modules/constructor";
-import { Container } from "@mantine/core";
 import { FileWithPath } from "@mantine/dropzone";
-import { NextPage } from "next";
-import { useState } from "react";
+import React, { useState } from "react";
+import FontConvert from "../fontConvert";
+import FontDisplay from "../fontDisplay";
+import FontUpload from "../fontUpload";
 
-const ConstructorPage: NextPage = () => {
+const Constructor: React.FC = () => {
 	const [sourceFile, setSourceFile] = useState<FileWithPath>();
 	const [font, setFont] = useState<FontContent>();
 	const [force, setForce] = useState(false);
@@ -16,21 +16,22 @@ const ConstructorPage: NextPage = () => {
 	};
 
 	return (
-		<Container size="md">
+		<>
 			{sourceFile === undefined && (
 				<FontUpload onDrop={(f) => setSourceFile(f[0])} />
 			)}
 			{sourceFile && font === undefined && (
-				<FontConvert sourceFile={sourceFile} onConvert={setFont} force={force} />
-			)}
-			{font !== undefined && (
-				<FontDisplay
-					font={font}
-					onForcePrerenderClick={onForceClick}
+				<FontConvert
+					sourceFile={sourceFile}
+					onConvert={setFont}
+					force={force}
 				/>
 			)}
-		</Container>
+			{font !== undefined && (
+				<FontDisplay font={font} onForcePrerenderClick={onForceClick} />
+			)}
+		</>
 	);
 };
 
-export default ConstructorPage;
+export default React.memo(Constructor);
