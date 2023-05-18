@@ -5,9 +5,10 @@ import { useStyles } from "./textCard.style";
 type Props = {
 	text: string;
 	title: string;
+	id?: string;
 };
 
-const TextCard: React.FC<Props> = ({ text, title }) => {
+const TextCard: React.FC<Props> = ({ text, title, id }) => {
 	const { classes } = useStyles();
 	return (
 		<Card
@@ -16,6 +17,7 @@ const TextCard: React.FC<Props> = ({ text, title }) => {
 			padding="lg"
 			radius="md"
 			withBorder
+			id={id}
 		>
 			<Group position="apart">
 				<Text

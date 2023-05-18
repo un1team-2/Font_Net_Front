@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Layout from "@/common/components/layout";
 import { useColorScheme } from "@mantine/hooks";
 import { getCookie, setCookie } from "cookies-next";
+import "../common/utils/globalStyles.css";
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 	const { Component, pageProps } = props;
@@ -16,11 +17,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 	const [colorScheme, setColorScheme] = useState<ColorScheme>(
 		props.colorScheme ?? preferredColorScheme
 	);
-    
-    useEffect(() => {
-        if(props.colorScheme === undefined)
-            setColorScheme(preferredColorScheme);
-    }, [props.colorScheme, preferredColorScheme])
+
+	useEffect(() => {
+		if (props.colorScheme === undefined)
+			setColorScheme(preferredColorScheme);
+	}, [props.colorScheme, preferredColorScheme]);
 
 	const toggleColorScheme = (value?: ColorScheme) => {
 		const nextColorScheme =

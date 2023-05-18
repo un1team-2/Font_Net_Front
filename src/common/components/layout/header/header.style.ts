@@ -4,7 +4,7 @@ export const HEADER_HEIGHT = rem(60);
 
 export const useStyles = createStyles((theme) => ({
 	root: {
-		position: "relative",
+		position: "sticky",
 		zIndex: 1,
 	},
 

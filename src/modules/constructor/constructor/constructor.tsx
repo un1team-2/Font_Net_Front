@@ -16,7 +16,7 @@ const Constructor: React.FC = () => {
 	};
 
 	return (
-		<>
+		<div id="constructor">
 			{sourceFile === undefined && (
 				<FontUpload onDrop={(f) => setSourceFile(f[0])} />
 			)}
@@ -30,7 +30,7 @@ const Constructor: React.FC = () => {
 			{font !== undefined && (
 				<FontDisplay font={font} onForcePrerenderClick={onForceClick} />
 			)}
-		</>
+		</div>
 	);
 };
 
