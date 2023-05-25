@@ -1,5 +1,4 @@
 import { apiClient } from "../../axiosClients";
-import { Result } from "../../types";
 import { ConvertResponse, FontResponse, FontsResponse } from "./types";
 
 const getAll = async (cancel = false) => {
