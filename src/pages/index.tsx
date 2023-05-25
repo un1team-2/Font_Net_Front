@@ -1,4 +1,4 @@
-import { Corousel, TextCard, QuestionBlock, ContactUs } from "@/modules/main";
+import { Corousel, TextCard, QuestionBlock } from "@/modules/main";
 import { Container, Stack } from "@mantine/core";
 import { NextPage } from "next";
 import { LeadHeader } from "@/modules/main";
@@ -21,7 +21,6 @@ const IndexPage: NextPage = () => {
 					text="Вы можете попробовать это лично, наш конструктор уже научился адаптировать 95% иностранных шрифтов, попробуйте и вы!"
 				></TextCard>
 				<QuestionBlock />
-				<ContactUs />
 			</Stack>
 		</Container>
 	);
