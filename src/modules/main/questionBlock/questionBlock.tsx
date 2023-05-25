@@ -26,33 +26,25 @@ const QuestionBlock: React.FC = () => {
 						Почему мы?
 					</Accordion.Control>
 					<Accordion.Panel>
-						Ясность нашей позиции очевидна: убеждённость некоторых
-						оппонентов является качественно новой ступенью системы
-						массового участия. Разнообразный и богатый опыт говорит
-						нам, что семантический разбор внешних противодействий
-						способствует повышению качества соответствующих условий
-						активизации.
+						Мы удобный продукт для творческих личностей, дизайнеров, блогеров, редакторов и т.д. Мы предоставляем качественный и протестированный продукт, так что пользуйтесь!
 					</Accordion.Panel>
 				</Accordion.Item>
 
 				<Accordion.Item value="flexibility">
 					<Accordion.Control className={classes.text}>
-						Flexibility
+						Как нас поддержать?
 					</Accordion.Control>
 					<Accordion.Panel>
-						Configure components appearance and behavior with vast
-						amount of settings or overwrite any part of component
-						styles
+						Пишите нам в комментариях отзывы о нашем продукте и делитесь с друзьями:)
 					</Accordion.Panel>
 				</Accordion.Item>
 
 				<Accordion.Item value="focus-ring">
 					<Accordion.Control className={classes.text}>
-						No annoying focus ring
+						Кто мы?
 					</Accordion.Control>
 					<Accordion.Panel>
-						With new :focus-visible pseudo-class focus ring appears
-						only when user navigates with keyboard
+						Мы группа разработчиков состоящая из нескольких коллег, работаем над улучшением контентной жизни людей!
 					</Accordion.Panel>
 				</Accordion.Item>
 			</Accordion>
